@@ -10,7 +10,8 @@ attrib +h fconfig.bat
 IF NOT EXIST "version.bat" (
     curl --silent --output %curfol%\version.bat --url https://raw.githubusercontent.com/wahyuu2821/ADB_Batch/main/version.bat?token=GHSAT0AAAAAABYSTZID2CXGNW7WU4MZGEXOYZGU4FQ
 )
-IF NOT EXIST "version.bat" GOTO :EOF
+timeout /t 1 > nul
+IF NOT EXIST "version.bat" GOTO :end
 call version.bat
 
 IF %curver%==%version% (
@@ -29,4 +30,6 @@ IF %curver%==%version% (
     start test.bat
 )
 
+:end
 del version.bat
+exit
