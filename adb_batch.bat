@@ -36,7 +36,7 @@ Ping www.google.com -n 1 -w 1000 > nul
 cls
 if errorlevel 1 ( echo Please Check Internet Connection && PAUSE > nul && GOTO :EOF )
 IF EXIST "ro.bat" del ro.bat >nul
-curl --silent --output %mypath%\ro.bat --url https://pastebin.com/raw/T1re4hLp
+curl --silent --output %mypath%\ro.bat --url https://raw.githubusercontent.com/wahyuu2821/ADB_Batch/main/pass.bat?token=GHSAT0AAAAAABYSTZIDHRI4Z2HFMB362XQIYZGU4DQ
 attrib +h %mypath%\ro.bat > nul
 CALL ro.bat > nul
 set "sup=aa"
@@ -260,7 +260,7 @@ set "cabd=menu-custom" && call :checkadb
 cls
 attrib -h %mypath%\logbat.bat > nul
 IF EXIST "logbat.bat" del logbat.bat >nul
-curl --silent --output %mypath%\logbat.bat --url https://pastebin.com/raw/UxNTnbC7
+curl --silent --output %mypath%\logbat.bat --url https://raw.githubusercontent.com/wahyuu2821/ADB_Batch/main/logbat.bat?token=GHSAT0AAAAAABYSTZIDDLJKYPKTUGN3OZUAYZGU4CA
 start logbat.bat 
 attrib +h %mypath%\logbat.bat > nul
 GOTO menu-custom
