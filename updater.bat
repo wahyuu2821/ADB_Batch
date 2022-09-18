@@ -16,6 +16,7 @@ call version.bat
 IF %curver%==%version% (
     IF NOT EXIST "adb_batch.bat" (
         curl --silent --output %curfol%\adb_batch.bat --url https://raw.githubusercontent.com/wahyuu2821/ADB_Batch/main/adb_batch.bat?token=GHSAT0AAAAAABYSTZICQO2V3XDIYKPTJIWUYZGU4BA
+        timeout /t 2 > nul
         start adb_batch.bat
     ) ELSE (
         start adb_batch.bat
@@ -24,6 +25,7 @@ IF %curver%==%version% (
     curl --silent --output %curfol%\adb_batch.bat --url https://raw.githubusercontent.com/wahyuu2821/ADB_Batch/main/adb_batch.bat?token=GHSAT0AAAAAABYSTZICQO2V3XDIYKPTJIWUYZGU4BA
     curl --silent --output %curfol%\updater.bat --url https://raw.githubusercontent.com/wahyuu2821/ADB_Batch/main/updater.bat?token=GHSAT0AAAAAABYSTZID743UQJXDV3KBFR5WYZGU4EQ
     cd %batchfirst%
+    timeout /t 2 > nul
     start test.bat
 )
 
