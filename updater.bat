@@ -16,6 +16,7 @@ call version.bat
 IF %curver%==%version% (
     IF NOT EXIST "adb_batch.bat" (
         curl --silent --output %curfol%\adb_batch.bat --url https://raw.githubusercontent.com/wahyuu2821/ADB_Batch/main/adb_batch.bat?token=GHSAT0AAAAAABYSTZICQO2V3XDIYKPTJIWUYZGU4BA
+        start adb_batch.bat
     ) ELSE (
         start adb_batch.bat
     )
