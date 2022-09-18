@@ -9,9 +9,9 @@ attrib +h fconfig.bat
 
 IF NOT EXIST "version.bat" (
     curl --silent --output %curfol%\version.bat --url https://raw.githubusercontent.com/wahyuu2821/ADB_Batch/main/version.bat?token=GHSAT0AAAAAABYSTZID2CXGNW7WU4MZGEXOYZGU4FQ
-    GOTO :adbb
+    call :adbb
 ) ELSE (
-    GOTO :adbb
+    call :adbb
 )
 timeout /t 1 > nul
 IF NOT EXIST "version.bat" GOTO :end
